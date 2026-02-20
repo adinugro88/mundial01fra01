@@ -7,16 +7,16 @@
   <div class="container-6 w-container">
     <a href="{{ route('home') }}" aria-current="page" class="w-inline-block w--current"><img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image"></a>
     <nav role="navigation" class="w-nav-menu">
-      <a href="{{ route('offers') }}" class="nav-link-2 w-nav-link">Nos offres</a>
-      <a href="{{ route('prices') }}" class="nav-link-2 w-nav-link">Abonnements &amp; Prix</a>
-      <a href="{{ route('contact') }}" class="nav-link-2 w-nav-link">Contact</a>
+      <a href="{{ route('offers') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.offers') }}</a>
+      <a href="{{ route('prices') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.prices') }}</a>
+      <a href="{{ route('contact') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.contact') }}</a>
       <div class="language-switcher">
         <a href="{{ route('language.switch', 'en') }}" class="nav-link-2 w-nav-link @if(session('language') == 'en') active @endif">EN</a>
         <a href="{{ route('language.switch', 'fr') }}" class="nav-link-2 w-nav-link @if(session('language') == 'fr' || !session('language')) active @endif">FR</a>
         <a href="{{ route('language.switch', 'de') }}" class="nav-link-2 w-nav-link @if(session('language') == 'de') active @endif">DE</a>
       </div>
     </nav>
-    <a href="{{ route('task') }}" class="button-task-header w-button">Tâche</a>
+    <a href="{{ route('task') }}" class="button-task-header w-button">{{ trans_db('nav.task') }}</a>
     <div class="menu-button w-nav-button">
       <div class="icon w-icon-nav-menu"></div>
     </div>
@@ -24,8 +24,8 @@
 </div>
 <header id="hero-overlay" class="hero-overlay">
   <div class="container w-container"><img src="{{ asset('images/logo2_v3.svg') }}" loading="lazy" data-w-id="991c37f6-cf5d-1017-12c8-5ecdd607c6b1" alt="" class="image-6">
-    <h1 class="heading"><strong class="bold-text">Le Centre de Loisirs Mundial<br></strong></h1>
-    <h1 class="heading"><strong class="text-field">Du plaisir pour toute la famille</strong></h1>
+    <h1 class="heading"><strong class="bold-text">{{ trans_db('home.welcome_title') }}<br></strong></h1>
+    <h1 class="heading"><strong class="text-field">{{ trans_db('home.tagline') }}</strong></h1>
   </div>
 </header>
 <header id="hero" class="hero">
