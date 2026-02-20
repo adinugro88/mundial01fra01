@@ -38,39 +38,27 @@ Route::get('/tache/cancel', function () {
 
 // Angebote (Offers) sub-pages
 Route::get('/angebote/hallenbad', function () {
-    return view('angebote', [
-        'page_title' => 'Piscine'
-    ]);
+    return view('angebote-hallenbad');
 })->name('angebote-hallenbad');
 
 Route::get('/angebote/sauna', function () {
-    return view('angebote', [
-        'page_title' => 'Sauna'
-    ]);
+    return view('angebote-sauna');
 })->name('angebote-sauna');
 
 Route::get('/angebote/minigolf', function () {
-    return view('angebote', [
-        'page_title' => 'Minigolf'
-    ]);
+    return view('angebote-minigolf');
 })->name('angebote-minigolf');
 
 Route::get('/angebote/bowling', function () {
-    return view('angebote', [
-        'page_title' => 'Bowling'
-    ]);
+    return view('angebote-bowling');
 })->name('angebote-bowling');
 
 Route::get('/angebote/geburtstag', function () {
-    return view('angebote', [
-        'page_title' => 'Fête d\'anniversaire'
-    ]);
+    return view('angebote-birthday');
 })->name('angebote-birthday');
 
 Route::get('/angebote/restaurant', function () {
-    return view('angebote', [
-        'page_title' => 'Restaurant'
-    ]);
+    return view('angebote-restaurant');
 })->name('angebote-restaurant');
 
 

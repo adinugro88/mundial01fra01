@@ -91,6 +91,86 @@ class HardcodedContentSeeder extends Seeder
             ['key' => 'nav.task', 'language' => 'fr', 'section' => 'nav', 'value' => 'Tâche', 'type' => 'text'],
             ['key' => 'nav.task', 'language' => 'en', 'section' => 'nav', 'value' => 'Task', 'type' => 'text'],
             ['key' => 'nav.task', 'language' => 'de', 'section' => 'nav', 'value' => 'Aufgabe', 'type' => 'text'],
+
+            // OFFER DETAIL PAGES
+            ['key' => 'offer.back_to_offers', 'language' => 'fr', 'section' => 'offers', 'value' => 'À la liste des offres', 'type' => 'text'],
+            ['key' => 'offer.back_to_offers', 'language' => 'en', 'section' => 'offers', 'value' => 'Back to offers', 'type' => 'text'],
+            ['key' => 'offer.back_to_offers', 'language' => 'de', 'section' => 'offers', 'value' => 'Zurück zu den Angeboten', 'type' => 'text'],
+
+            // HALLENBAD (PISCINE)
+            ['key' => 'offer.hallenbad.indoor_title', 'language' => 'fr', 'section' => 'hallenbad', 'value' => 'Piscine intérieure', 'type' => 'text'],
+            ['key' => 'offer.hallenbad.indoor_title', 'language' => 'en', 'section' => 'hallenbad', 'value' => 'Indoor Swimming Pool', 'type' => 'text'],
+            ['key' => 'offer.hallenbad.indoor_title', 'language' => 'de', 'section' => 'hallenbad', 'value' => 'Hallenbad', 'type' => 'text'],
+
+            ['key' => 'offer.hallenbad.indoor_desc', 'language' => 'fr', 'section' => 'hallenbad', 'value' => 'Notre piscine intérieure moderne offre un grand plaisir de baignade aux nageurs sportifs ainsi qu\'aux familles et aux amis. Le bain a une piscine de 50 mètres et promet un plaisir illimité pour petits et grands avec trois toboggans aquatiques. Que ce soit dans des chambres à air colorées, sur des pneus souples ou en chute libre, le plaisir de la glisse est garanti. Divisé en trois niveaux, votre favori parmi les toboggans aquatiques est sûr d\'être trouvé rapidement. Nous organisons aussi régulièrement des événements récréatifs, tels que des spectacles de plongée en hauteur ou des rencontres de sirènes. Non seulement pour les actifs, mais aussi pour les spectateurs un grand plaisir sportif. De plus, les diapositives sont un point fort pour nos jeunes visiteurs.', 'type' => 'html'],
+            ['key' => 'offer.hallenbad.indoor_desc', 'language' => 'en', 'section' => 'hallenbad', 'value' => 'Our modern indoor swimming pool offers great bathing pleasure for sports swimmers as well as families and friends. The bath has a 50-meter pool and promises unlimited fun for young and old with three water slides. Whether in colorful air chambers, on soft tires or in free fall, the pleasure of sliding is guaranteed. Divided into three levels, your favorite among the water slides is sure to be found quickly. We also regularly organize recreational events, such as high diving shows or mermaid encounters. Not only for the active, but also for spectators great sports pleasure. Furthermore, the slides are a highlight for our young visitors.', 'type' => 'html'],
+            ['key' => 'offer.hallenbad.indoor_desc', 'language' => 'de', 'section' => 'hallenbad', 'value' => 'Unser modernes Hallenbad bietet großes Badevergnügen für Leistungsschwimmer sowie für Familien und Freunde. Das Bad hat ein 50-Meter-Becken und verspricht unbegrenzten Spaß für Jung und Alt mit drei Wasserrutschen. Ob in farbigen Luftkammern, auf weichen Reifen oder im freien Fall, der Rutschenspaß ist garantiert. In drei Ebenen aufgeteilt, dein Favorit unter den Wasserrutschen ist schnell gefunden. Wir veranstalten auch regelmäßig Freizeitereignisse wie Hochsprungshows oder Meerjungfrauenbegegnungen. Nicht nur für die Aktiven, sondern auch für Zuschauer großes Sportvergnügen. Darüber hinaus sind die Rutschen ein Highlight für unsere jungen Besucher.', 'type' => 'html'],
+
+            ['key' => 'offer.hallenbad.natural_title', 'language' => 'fr', 'section' => 'hallenbad', 'value' => 'Piscine naturelle', 'type' => 'text'],
+            ['key' => 'offer.hallenbad.natural_title', 'language' => 'en', 'section' => 'hallenbad', 'value' => 'Natural Pool', 'type' => 'text'],
+            ['key' => 'offer.hallenbad.natural_title', 'language' => 'de', 'section' => 'hallenbad', 'value' => 'Naturpool', 'type' => 'text'],
+
+            ['key' => 'offer.hallenbad.natural_desc', 'language' => 'fr', 'section' => 'hallenbad', 'value' => 'Notre piscine naturelle offre une eau de baignade qualitativement comparable à celle d\'un lac naturel ou d\'un étang profond. Profitez des plaisirs de la baignade naturelle dans une eau sans chlore ni produits chimiques.', 'type' => 'html'],
+            ['key' => 'offer.hallenbad.natural_desc', 'language' => 'en', 'section' => 'hallenbad', 'value' => 'Our natural pool offers bathing water that is qualitatively comparable to that of a natural lake or deep pond. Enjoy the pleasures of natural bathing in chlorine and chemical-free water.', 'type' => 'html'],
+            ['key' => 'offer.hallenbad.natural_desc', 'language' => 'de', 'section' => 'hallenbad', 'value' => 'Unser Naturpool bietet Badewasser, das qualitativ vergleichbar mit dem eines Natursees oder tiefen Teichs ist. Genießen Sie die Freuden des natürlichen Badens in chlor- und chemikalienfreiem Wasser.', 'type' => 'html'],
+
+            // SAUNA
+            ['key' => 'offer.sauna.title', 'language' => 'fr', 'section' => 'sauna', 'value' => 'Sauna', 'type' => 'text'],
+            ['key' => 'offer.sauna.title', 'language' => 'en', 'section' => 'sauna', 'value' => 'Sauna', 'type' => 'text'],
+            ['key' => 'offer.sauna.title', 'language' => 'de', 'section' => 'sauna', 'value' => 'Sauna', 'type' => 'text'],
+
+            ['key' => 'offer.sauna.intro', 'language' => 'fr', 'section' => 'sauna', 'value' => 'Si vous aimez la chaleur, vous êtes exactement au bon endroit dans le sauna du Centre de Loisirs Mundial.', 'type' => 'text'],
+            ['key' => 'offer.sauna.intro', 'language' => 'en', 'section' => 'sauna', 'value' => 'If you like heat, you are in exactly the right place in the sauna of the Mundial Leisure Center.', 'type' => 'text'],
+            ['key' => 'offer.sauna.intro', 'language' => 'de', 'section' => 'sauna', 'value' => 'Wenn dir Wärme gefällt, bist du in der Sauna des Mundial Freizeitzentrums genau richtig.', 'type' => 'text'],
+
+            ['key' => 'offer.sauna.desc1', 'language' => 'fr', 'section' => 'sauna', 'value' => 'Notre espace sauna s\'étend sur environ 1\'500 m². Vivez la fascination de la chaleur dans l\'un de nos cinq saunas aux températures différentes.', 'type' => 'html'],
+            ['key' => 'offer.sauna.desc1', 'language' => 'en', 'section' => 'sauna', 'value' => 'Our sauna area extends over about 1,500 m². Experience the fascination of heat in one of our five saunas at different temperatures.', 'type' => 'html'],
+            ['key' => 'offer.sauna.desc1', 'language' => 'de', 'section' => 'sauna', 'value' => 'Unser Saunabereich erstreckt sich über etwa 1.500 m². Erleben Sie die Faszination der Wärme in einer unserer fünf Saunen bei unterschiedlichen Temperaturen.', 'type' => 'html'],
+
+            // MINIGOLF
+            ['key' => 'offer.minigolf.title', 'language' => 'fr', 'section' => 'minigolf', 'value' => 'Minigolf', 'type' => 'text'],
+            ['key' => 'offer.minigolf.title', 'language' => 'en', 'section' => 'minigolf', 'value' => 'Mini Golf', 'type' => 'text'],
+            ['key' => 'offer.minigolf.title', 'language' => 'de', 'section' => 'minigolf', 'value' => 'Minigolf', 'type' => 'text'],
+
+            ['key' => 'offer.minigolf.desc1', 'language' => 'fr', 'section' => 'minigolf', 'value' => 'Profitez d\'une partie de mini-golf sur notre terrain de mini-golf. Notre mini-golf de 20 trous est situé au cœur de notre parc naturel. Nature et plaisir pour toute la famille ! La longueur supplémentaire de certains trous est un défi particulier et garantit le plaisir de jouer !', 'type' => 'html'],
+            ['key' => 'offer.minigolf.desc1', 'language' => 'en', 'section' => 'minigolf', 'value' => 'Enjoy a game of mini golf on our mini golf course. Our 20-hole mini golf is located in the heart of our natural park. Nature and fun for the whole family! The extra length of some holes is a particular challenge and guarantees the pleasure of playing!', 'type' => 'html'],
+            ['key' => 'offer.minigolf.desc1', 'language' => 'de', 'section' => 'minigolf', 'value' => 'Genießen Sie ein Spiel Minigolf auf unserem Minigolfplatz. Unser 20-Loch-Minigolf befindet sich im Herzen unseres Naturparks. Natur und Spaß für die ganze Familie! Die extra Länge einiger Löcher ist eine besondere Herausforderung und garantiert das Vergnügen des Spielens!', 'type' => 'html'],
+
+            ['key' => 'offer.minigolf.desc2', 'language' => 'fr', 'section' => 'minigolf', 'value' => 'Vous avez une occasion spéciale ? Pas de problème, car avec nous, vous pouvez aussi faire la fête ensemble. Des fêtes d\'anniversaire inoubliables pour les enfants ou un événement d\'entreprise sont possibles sur demande.', 'type' => 'html'],
+            ['key' => 'offer.minigolf.desc2', 'language' => 'en', 'section' => 'minigolf', 'value' => 'Do you have a special occasion? No problem, because with us you can also party together. Unforgettable birthday parties for children or a corporate event are possible on request.', 'type' => 'html'],
+            ['key' => 'offer.minigolf.desc2', 'language' => 'de', 'section' => 'minigolf', 'value' => 'Haben Sie einen besonderen Anlass? Kein Problem, denn bei uns können Sie auch zusammen feiern. Unvergessliche Kindergeburtstage oder Veranstaltungen sind auf Anfrage möglich.', 'type' => 'html'],
+
+            // BOWLING
+            ['key' => 'offer.bowling.title', 'language' => 'fr', 'section' => 'bowling', 'value' => 'Bowling', 'type' => 'text'],
+            ['key' => 'offer.bowling.title', 'language' => 'en', 'section' => 'bowling', 'value' => 'Bowling', 'type' => 'text'],
+            ['key' => 'offer.bowling.title', 'language' => 'de', 'section' => 'bowling', 'value' => 'Bowling', 'type' => 'text'],
+
+            ['key' => 'offer.bowling.subtitle1', 'language' => 'fr', 'section' => 'bowling', 'value' => 'Le jeu pour le sport et le plaisir entre amis ou en famille.', 'type' => 'text'],
+            ['key' => 'offer.bowling.subtitle1', 'language' => 'en', 'section' => 'bowling', 'value' => 'The game for sport and fun with friends or family.', 'type' => 'text'],
+            ['key' => 'offer.bowling.subtitle1', 'language' => 'de', 'section' => 'bowling', 'value' => 'Das Spiel für Sport und Spaß mit Freunden oder Familie.', 'type' => 'text'],
+
+            // BIRTHDAY
+            ['key' => 'offer.birthday.title', 'language' => 'fr', 'section' => 'birthday', 'value' => 'Fête d\'Anniversaire', 'type' => 'text'],
+            ['key' => 'offer.birthday.title', 'language' => 'en', 'section' => 'birthday', 'value' => 'Birthday Party', 'type' => 'text'],
+            ['key' => 'offer.birthday.title', 'language' => 'de', 'section' => 'birthday', 'value' => 'Geburtstagsfeier', 'type' => 'text'],
+
+            ['key' => 'offer.birthday.intro', 'language' => 'fr', 'section' => 'birthday', 'value' => 'Célébrez votre anniversaire au Centro de Loisirs Mundial ! Nous proposons des forfaits d\'anniversaire personnalisés avec diverses activités.', 'type' => 'html'],
+            ['key' => 'offer.birthday.intro', 'language' => 'en', 'section' => 'birthday', 'value' => 'Celebrate your birthday at the Mundial Leisure Center! We offer personalized birthday packages with various activities.', 'type' => 'html'],
+            ['key' => 'offer.birthday.intro', 'language' => 'de', 'section' => 'birthday', 'value' => 'Feiern Sie Ihren Geburtstag im Mundial Freizeitzentrum! Wir bieten personalisierte Geburtstagsangebote mit verschiedenen Aktivitäten an.', 'type' => 'html'],
+
+            // RESTAURANT
+            ['key' => 'offer.restaurant.title', 'language' => 'fr', 'section' => 'restaurant', 'value' => 'Restaurant', 'type' => 'text'],
+            ['key' => 'offer.restaurant.title', 'language' => 'en', 'section' => 'restaurant', 'value' => 'Restaurant', 'type' => 'text'],
+            ['key' => 'offer.restaurant.title', 'language' => 'de', 'section' => 'restaurant', 'value' => 'Restaurant', 'type' => 'text'],
+
+            ['key' => 'offer.restaurant.intro', 'language' => 'fr', 'section' => 'restaurant', 'value' => 'Profitez de notre restaurant au Centro de Loisirs Mundial avec une cuisine délicieuse et une ambiance agréable.', 'type' => 'html'],
+            ['key' => 'offer.restaurant.intro', 'language' => 'en', 'section' => 'restaurant', 'value' => 'Enjoy our restaurant at the Mundial Leisure Center with delicious cuisine and a pleasant atmosphere.', 'type' => 'html'],
+            ['key' => 'offer.restaurant.intro', 'language' => 'de', 'section' => 'restaurant', 'value' => 'Genießen Sie unser Restaurant im Mundial Freizeitzentrum mit köstlicher Küche und angenehmer Atmosphäre.', 'type' => 'html'],
+
+            // BUTTONS
+            ['key' => 'offer.button_book', 'language' => 'fr', 'section' => 'offers', 'value' => 'Réserver', 'type' => 'text'],
+            ['key' => 'offer.button_book', 'language' => 'en', 'section' => 'offers', 'value' => 'Book Now', 'type' => 'text'],
+            ['key' => 'offer.button_book', 'language' => 'de', 'section' => 'offers', 'value' => 'Buchen', 'type' => 'text'],
         ];
 
         foreach ($translations as $trans) {
