@@ -117,7 +117,7 @@
       <p style="margin-top: 10px;"><em>Les enfants de moins de 16 ans doivent être accompagnés par un adulte dans le sauna et la douche à vapeur.</em></p>
     </div>
 
-    <div data-collapse="tiny" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+    <div data-collapse="tiny" data-animation="default" data-duration="400"   role="banner" class="navbar w-nav">
       <div class="container-6 w-container">
         <a href="{{ route('home') }}" class="w-inline-block"><img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image"></a>
         <nav role="navigation" class="w-nav-menu">
