@@ -21,7 +21,7 @@
         <div><label for="First-Name-2" id="contact-first-name">{{ trans_db('page.contact.reason_label', null, 'La raison pour le contact *') }}</label>
           <select id="field" name="reason" required="" class="w-select">
             <option value="">{{ trans_db('page.contact.reason_placeholder', null, 'Veuillez choisir...') }}</option>
-            <option value="Questions générales">{{ trans_db('page.contact.reason_general', null, 'Questions générales') }}</option>
+            <option  value="Questions générales">{{ trans_db('page.contact.reason_general', null, 'Questions générales') }}</option>
             <option value="Questions sur les abonnements">{{ trans_db('page.contact.reason_subscription', null, 'Questions sur les abonnements') }}</option>
             <option value="Réservations">{{ trans_db('page.contact.reason_booking', null, 'Réservations') }}</option>
             <option value="Eloges et plaintes">{{ trans_db('page.contact.reason_feedback', null, 'Eloges et plaintes') }}</option>
