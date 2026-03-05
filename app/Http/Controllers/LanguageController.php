@@ -8,11 +8,12 @@ class LanguageController extends Controller
 {
     public function switch($language)
     {
-        $supportedLanguages = ['en', 'fr', 'de', 'es', 'it'];
+        $supportedLanguages = ['id', 'en', 'fr'];
         
         if (in_array($language, $supportedLanguages)) {
             session(['language' => $language]);
-            app()->setLocale($language);
+            \Illuminate\Support\Facades\App::setLocale($language);
+            session()->save();
         }
         
         return back();

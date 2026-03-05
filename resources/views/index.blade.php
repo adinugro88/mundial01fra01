@@ -3,25 +3,7 @@
 @section('title', 'mundial - Le Centre de Loisirs Mundial')
 
 @section('content')
-<div data-collapse="tiny" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
-  <div class="container-6 w-container">
-    <a href="{{ route('home') }}" aria-current="page" class="w-inline-block w--current"><img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image"></a>
-    <nav role="navigation" class="w-nav-menu">
-      <a href="{{ route('offers') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.offers') }}</a>
-      <a href="{{ route('prices') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.prices') }}</a>
-      <a href="{{ route('contact') }}" class="nav-link-2 w-nav-link">{{ trans_db('nav.contact') }}</a>
-      <div class="language-switcher">
-        <a href="{{ route('language.switch', 'en') }}" class="nav-link-2 w-nav-link @if(session('language') == 'en') active @endif">EN</a>
-        <a href="{{ route('language.switch', 'fr') }}" class="nav-link-2 w-nav-link @if(session('language') == 'fr' || !session('language')) active @endif">FR</a>
-        <a href="{{ route('language.switch', 'de') }}" class="nav-link-2 w-nav-link @if(session('language') == 'de') active @endif">DE</a>
-      </div>
-    </nav>
-    <a href="{{ route('task') }}" class="button-task-header w-button">{{ trans_db('nav.task') }}</a>
-    <div class="menu-button w-nav-button">
-      <div class="icon w-icon-nav-menu"></div>
-    </div>
-  </div>
-</div>
+@include('components.navbar')
 <header id="hero-overlay" class="hero-overlay">
   <div class="container w-container"><img src="{{ asset('images/logo2_v3.svg') }}" loading="lazy" data-w-id="991c37f6-cf5d-1017-12c8-5ecdd607c6b1" alt="" class="image-6">
     <h1 class="heading"><strong class="bold-text">{{ trans_db('home.welcome_title') }}<br></strong></h1>
@@ -83,13 +65,13 @@
       </a>
       <a href="{{ route('angebote-birthday') }}" class="angebot-block w-inline-block">
         <div class="div-angebot-picture-5"><img src="{{ asset('images/logoicon_birthday_green.svg') }}" loading="lazy" alt="" class="logoicon_05"></div>
-        <h3 class="heading-8">Fête d&#x27;anniversaire</h3>
-        <p class="paragraph-6">Commencez la nouvelle année de votre vie sportive et active. Célébrez les fêtes d&#x27;anniversaire sur la piste de bowling. Venez vous amuser sur notre piste de bowling !</p>
-        <div class="text-block-5">En savoir plus</div>
+        <h3 class="heading-8">{{ trans_db('card.birthday.title', null, "Fête d'Anniversaire") }}</h3>
+        <p class="paragraph-6">{!! trans_db('card.birthday.desc', null, "Commencez la nouvelle année de votre vie sportive et active. Célébrez les fêtes d'anniversaire sur la piste de bowling. Venez vous amuser sur notre piste de bowling!") !!}</p>
+        <div class="text-block-5">{{ trans_db('card.more_link', null, 'En savoir plus') }}</div>
       </a>
     </div>
     <div class="div-block-8">
-      <a href="{{ route('offers') }}" class="primary-button w-button">Découvrez toutes nos offres</a>
+      <a href="{{ route('offers') }}" class="primary-button w-button">{{ trans_db('home.discover_all_offers', null, 'Découvrez toutes nos offres') }}</a>
     </div>
   </div>
 </section>
@@ -100,11 +82,11 @@
   <div class="container-8 w-container">
     <div class="w-row">
       <div class="w-col w-col-6">
-        <a href="{{ route('offers') }}" class="footer-link">Offres</a>
-        <a href="{{ route('prices') }}" class="footer-link">Abonnements &amp; Prix</a>
+        <a href="{{ route('offers') }}" class="footer-link">{{ trans_db('nav.offers') }}</a>
+        <a href="{{ route('prices') }}" class="footer-link">{{ trans_db('nav.prices') }}</a>
       </div>
       <div class="w-col w-col-6">
-        <a href="{{ route('contact') }}" class="footer-link">Contact</a>
+        <a href="{{ route('contact') }}" class="footer-link">{{ trans_db('nav.contact') }}</a>
       </div>
     </div>
   </div>

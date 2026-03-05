@@ -23,13 +23,13 @@
     </div>
   </div>
   <div class="container-9 w-container">
-    <h1 class="heading-10">Tâche 1</h1>
-    <p class="paragraph-9">Un ami vous a dit à quel point le sauna aromatique du centre de loisirs Mundial est bénéfique. Vous aimeriez le voir par vous-même la semaine prochaine. <br>Utilisez le site web de Mundial pour savoir si le sauna aromatique est ouvert en hiver.</p>
+    <h1 class="heading-10">{{ trans_db('task.heading', null, 'Tâche 1') }}</h1>
+    <p class="paragraph-9">{{ trans_db('task.description', null, 'Un ami vous a dit à quel point le sauna aromatique du centre de loisirs Mundial est bénéfique. Vous aimeriez le voir par vous-même la semaine prochaine. <br>Utilisez le site web de Mundial pour savoir si le sauna aromatique est ouvert en hiver.') }}</p>
     <div>
       <div class="w-layout-grid grid-2">
-        <a href="{{ route('task.cancel') }}" class="button3 w-button">Sauter la tâche</a>
+        <a href="{{ route('task.cancel') }}" class="button3 w-button">{{ trans_db('task.skip_button', null, 'Sauter la tâche') }}</a>
         <div class="w-embed w-script">
-          <button class="button" onclick="goBack()">Continuer</button>
+          <button class="button" onclick="goBack()">{{ trans_db('task.continue_button', null, 'Continuer') }}</button>
           <script>
             function goBack() {
               window.history.back();
@@ -39,5 +39,4 @@
       </div>
     </div>
   </div>
-</main>
-@endsection
+  @include('components.navbar')

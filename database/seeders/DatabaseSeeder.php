@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
         // Seed translations
         $this->call(TranslationSeeder::class);
         $this->call(HardcodedContentSeeder::class);
+        $this->call(PriceContentSeeder::class);
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ session('language', 'fr') }}">
+<html lang="{{ session('language', 'id') }}">
 <head>
   <meta charset="utf-8">
   <title>@yield('title', 'Mundial')</title>
