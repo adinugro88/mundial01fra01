@@ -16,12 +16,12 @@ class SetLanguageLocale
     public function handle(Request $request, Closure $next): Response
     {
         // Get language from URL parameter, session, or use default
-        $language = $request->query('lang') ?? session('language') ?? config('app.locale', 'fr');
+        $language = $request->query('lang') ?? session('language') ?? config('app.locale', 'id');
         
         // Validate language is supported
-        $supportedLanguages = ['en', 'fr', 'de', 'es', 'it'];
+        $supportedLanguages = ['id', 'en', 'fr', 'de', 'es', 'it'];
         if (!in_array($language, $supportedLanguages)) {
-            $language = 'fr';
+            $language = 'id';
         }
         
         // Set session and app locale

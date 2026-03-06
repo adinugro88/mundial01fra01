@@ -14,7 +14,7 @@ class PriceContent extends Model
 
     public static function getBySection($sectionKey, $language = null)
     {
-        $lang = $language ?? session('language') ?? config('app.locale', 'fr');
+        $lang = $language ?? session('language') ?? config('app.locale', 'id');
         
         $priceContent = self::where('section_key', $sectionKey)->first();
         
