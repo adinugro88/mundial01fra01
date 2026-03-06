@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', '{{ trans_db("page.prices.title", null, "Abonnements & Prix - Mundial") }}')
+@section('title', 'Prices')
 
 @section('content')
 <main id="main-content" class="main-content">
@@ -39,12 +39,14 @@
         <h3 class="heading-9">{{ trans_db('page.prices.payment_title', null, 'Mode de paiement') }}</h3>
         <p class="paragraph-7">{!! trans_db('page.prices.payment_description', null, 'Tous les prix sont en francs suisses. Les changements de prix sont possibles. Vous pouvez payer le tarif d\'entrée en espèces (francs ou euros), ou par carte bancaire.') !!}<br></p>
         <div class="div-block-17">
-          <img src="{{ asset('images/twint.svg') }}" loading="lazy" alt="" class="image-9">
+          {{-- <img src="{{ asset('images/twint.svg') }}" loading="lazy" alt="" class="image-9"> --}}
           <img src="{{ asset('images/visa.svg') }}" loading="lazy" alt="" class="image-9">
           <img src="{{ asset('images/mastercard.svg') }}" loading="lazy" alt="" class="image-9">
-          <img src="{{ asset('images/maestro.svg') }}" loading="lazy" alt="" class="image-9">
+          <img src="{{ asset('images/qrismastr.webp') }}" style="height: 60px;" loading="lazy" alt="" class="image-9">
+          <img src="{{ asset('images/gopay.png') }}" alt="" loading="lazy" alt="" class="image-9">
+          {{-- <img src="{{ asset('images/maestro.svg') }}" loading="lazy" alt="" class="image-9">
           <img src="{{ asset('images/postfinance.svg') }}" loading="lazy" alt="" class="image-9">
-          <img src="{{ asset('images/reka.svg') }}" loading="lazy" alt="" class="image-9">
+          <img src="{{ asset('images/reka.svg') }}" loading="lazy" alt="" class="image-9"> --}}
         </div>
       </div>
     </div>
