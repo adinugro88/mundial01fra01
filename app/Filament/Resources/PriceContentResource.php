@@ -31,29 +31,37 @@ class PriceContentResource extends Resource
                     ->placeholder('e.g., pool_admission, sauna_admission')
                     ->columnSpanFull(),
 
-                Tabs::make('Content')
+                Tabs::make('Languages')
                     ->tabs([
                         Tabs\Tab::make('Français')
-                            ->schema([
-                                Forms\Components\RichEditor::make('content.fr')
-                                    ->required()
-                                    ->columnSpanFull(),
-                            ]),
+                            ->schema(self::createLanguageTab('fr')),
                         Tabs\Tab::make('English')
-                            ->schema([
-                                Forms\Components\RichEditor::make('content.en')
-                                    ->required()
-                                    ->columnSpanFull(),
-                            ]),
+                            ->schema(self::createLanguageTab('en')),
                         Tabs\Tab::make('Bahasa Indonesia')
-                            ->schema([
-                                Forms\Components\RichEditor::make('content.id')
-                                    ->required()
-                                    ->columnSpanFull(),
-                            ]),
+                            ->schema(self::createLanguageTab('id')),
                     ])
                     ->columnSpanFull(),
             ]);
+    }
+
+    private static function createLanguageTab(string $lang): array
+    {
+        return [
+            Forms\Components\Textarea::make("content_{$lang}")
+                ->label('Table Data')
+                ->placeholder("Format:\nService | Price 1 | Price 2 | Price 3\nRow 1 | value | value | value\nRow 2 | value | value | value")
+                ->rows(15)
+                ->hint('Separate columns with pipe (|). Each line is a row. First line is headers.')
+                ->required()
+                ->columnSpanFull(),
+
+            Forms\Components\ViewField::make("preview_{$lang}")
+                ->label('Preview')
+                ->view('filament.components.price-table-preview', [
+                    'language' => $lang,
+                ])
+                ->columnSpanFull(),
+        ];
     }
 
     public static function table(Table $table): Table

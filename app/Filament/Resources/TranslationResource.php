@@ -38,6 +38,7 @@ class TranslationResource extends Resource
                     
                 Forms\Components\Select::make('language')
                     ->options([
+                        'id' => 'Bahasa Indonesia',
                         'en' => 'English',
                         'fr' => 'Français',
                         'de' => 'Deutsch',
@@ -47,7 +48,7 @@ class TranslationResource extends Resource
                     ->required()
                     ->disabled($isEditingMode)
                     ->dehydrated(!$isEditingMode)
-                    ->default('fr'),
+                    ->default('id'),
                     
                 Forms\Components\TextInput::make('section')
                     ->placeholder('e.g., home, offers, contact'),
@@ -77,9 +78,12 @@ class TranslationResource extends Resource
                 Tables\Columns\TextColumn::make('language')
                     ->badge()
                     ->color(fn (string $state): string => match($state) {
+                        'id' => 'primary',
                         'en' => 'info',
                         'fr' => 'success',
                         'de' => 'warning',
+                        'es' => 'danger',
+                        'it' => 'warning',
                         default => 'gray',
                     })
                     ->sortable(),
@@ -98,6 +102,7 @@ class TranslationResource extends Resource
             ->filters([
                 Tables\Filters\SelectFilter::make('language')
                     ->options([
+                        'id' => 'Bahasa Indonesia',
                         'en' => 'English',
                         'fr' => 'Français',
                         'de' => 'Deutsch',

@@ -271,6 +271,12 @@ class TranslationSeeder extends Seeder
             ['key' => 'page.prices.table_under_6', 'language' => 'fr', 'section' => 'pages', 'value' => 'Moins de 6 ans', 'type' => 'text'],
             ['key' => 'page.prices.pool_note', 'language' => 'fr', 'section' => 'pages', 'value' => 'Les enfants de moins de 12 ans doivent être accompagnés par un adulte dans la piscine intérieure.', 'type' => 'text'],
             ['key' => 'page.prices.sauna_note', 'language' => 'fr', 'section' => 'pages', 'value' => 'Les enfants de moins de 16 ans doivent être accompagnés par un adulte dans le sauna et la douche à vapeur.', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission', 'language' => 'fr', 'section' => 'pages', 'value' => 'Entrée piste de Bowling', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission_desc', 'language' => 'fr', 'section' => 'pages', 'value' => 'Les enfants de moins de 12 ans doivent être accompagnés par un adulte sur la piste de bowling.', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission', 'language' => 'fr', 'section' => 'pages', 'value' => 'Entrée Mini-Golf', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission_desc', 'language' => 'fr', 'section' => 'pages', 'value' => 'Les enfants de moins de 12 ans doivent être accompagnés d\'un adulte lorsqu\'ils jouent au mini-golf.', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission', 'language' => 'fr', 'section' => 'pages', 'value' => 'Entrée pour l\'ensemble du centre de loisirs (Toutes les offres)', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission_desc', 'language' => 'fr', 'section' => 'pages', 'value' => 'Dans le sauna et dans la douche à vapeur, les enfants de moins de 16 ans doivent être accompagnés d\'une personne adulte.', 'type' => 'text'],
             
             // Prices Page - English
             ['key' => 'page.prices.title', 'language' => 'en', 'section' => 'pages', 'value' => 'Subscriptions & Prices', 'type' => 'text'],
@@ -285,6 +291,12 @@ class TranslationSeeder extends Seeder
             ['key' => 'page.prices.table_under_6', 'language' => 'en', 'section' => 'pages', 'value' => 'Under 6 years', 'type' => 'text'],
             ['key' => 'page.prices.pool_note', 'language' => 'en', 'section' => 'pages', 'value' => 'Children under 12 must be accompanied by an adult in the indoor pool.', 'type' => 'text'],
             ['key' => 'page.prices.sauna_note', 'language' => 'en', 'section' => 'pages', 'value' => 'Children under 16 must be accompanied by an adult in the sauna and steam shower.', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission', 'language' => 'en', 'section' => 'pages', 'value' => 'Bowling alley admission', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission_desc', 'language' => 'en', 'section' => 'pages', 'value' => 'Children under 12 must be accompanied by an adult on the bowling alley.', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission', 'language' => 'en', 'section' => 'pages', 'value' => 'Mini-Golf admission', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission_desc', 'language' => 'en', 'section' => 'pages', 'value' => 'Children under 12 must be accompanied by an adult when playing mini-golf.', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission', 'language' => 'en', 'section' => 'pages', 'value' => 'Admission for the entire leisure center (All offers)', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission_desc', 'language' => 'en', 'section' => 'pages', 'value' => 'In the sauna and steam shower, children under 16 must be accompanied by an adult.', 'type' => 'text'],
             
             // Prices Page - Indonesian
             ['key' => 'page.prices.title', 'language' => 'id', 'section' => 'pages', 'value' => 'Langganan & Harga', 'type' => 'text'],
@@ -299,6 +311,12 @@ class TranslationSeeder extends Seeder
             ['key' => 'page.prices.table_under_6', 'language' => 'id', 'section' => 'pages', 'value' => 'Di bawah 6 tahun', 'type' => 'text'],
             ['key' => 'page.prices.pool_note', 'language' => 'id', 'section' => 'pages', 'value' => 'Anak-anak di bawah 12 tahun harus didampingi oleh orang dewasa di kolam renang dalam ruangan.', 'type' => 'text'],
             ['key' => 'page.prices.sauna_note', 'language' => 'id', 'section' => 'pages', 'value' => 'Anak-anak di bawah 16 tahun harus didampingi oleh orang dewasa di sauna dan kamar uap.', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission', 'language' => 'id', 'section' => 'pages', 'value' => 'Tiket masuk arena Bowling', 'type' => 'text'],
+            ['key' => 'page.prices.bowling_admission_desc', 'language' => 'id', 'section' => 'pages', 'value' => 'Anak-anak di bawah 12 tahun harus didampingi oleh orang dewasa di arena bowling.', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission', 'language' => 'id', 'section' => 'pages', 'value' => 'Tiket masuk Mini-Golf', 'type' => 'text'],
+            ['key' => 'page.prices.minigolf_admission_desc', 'language' => 'id', 'section' => 'pages', 'value' => 'Anak-anak di bawah 12 tahun harus didampingi oleh orang dewasa saat bermain mini-golf.', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission', 'language' => 'id', 'section' => 'pages', 'value' => 'Tiket masuk untuk seluruh pusat rekreasi (Semua penawaran)', 'type' => 'text'],
+            ['key' => 'page.prices.all_offers_admission_desc', 'language' => 'id', 'section' => 'pages', 'value' => 'Di sauna dan shower uap, anak-anak di bawah 16 tahun harus didampingi oleh orang dewasa.', 'type' => 'text'],
             
             // Contact Page - French
             ['key' => 'page.contact.title', 'language' => 'fr', 'section' => 'pages', 'value' => 'Contact', 'type' => 'text'],

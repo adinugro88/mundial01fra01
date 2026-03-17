@@ -21,13 +21,32 @@
 
     <div class="html-embed w-embed">
       <h3>{{ trans_db('page.prices.pool_admission', null, 'Entrée piscine') }}</h3>
+      <p>{{ trans_db('page.prices.pool_admission_desc', null, ' Les enfants de moins de 12 ans doivent être accompagnés par un adulte dans la piscine intérieure. ') }}</p>
       {!! \App\Models\PriceContent::getBySection('pool_admission') ?? '<p>Konten tidak ditemukan. Silakan tambahkan di admin panel.</p>' !!}
     </div>
 
     <div class="w-container">
       <h3>{{ trans_db('page.prices.sauna_admission', null, 'Entrée sauna et douche à vapeur') }}</h3>
+      <p>{{ trans_db('page.prices.sauna_admission_desc', null, 'Les enfants de moins de 16 ans doivent être accompagnés par un adulte dans le sauna et la douche à vapeur.') }}</p>
       {!! \App\Models\PriceContent::getBySection('sauna_admission') ?? '<p>Konten tidak ditemukan. Silakan tambahkan di admin panel.</p>' !!}
-      <p style="margin-top: 10px;"><em>{{ trans_db('page.prices.sauna_note', null, 'Les enfants de moins de 16 ans doivent être accompagnés par un adulte dans le sauna et la douche à vapeur.') }}</em></p>
+    </div>
+
+    <div class="html-embed w-embed" style="margin-top: 20px;">
+      <h3>{{ trans_db('page.prices.bowling_admission', null, 'Entrée piste de Bowling') }}</h3>
+      <p>{{ trans_db('page.prices.bowling_admission_desc', null, 'Les enfants de moins de 12 ans doivent être accompagnés par un adulte sur la piste de bowling.') }}</p>
+      {!! \App\Models\PriceContent::getBySection('bowling_admission') ?? '<p>Konten tidak ditemukan. Silakan tambahkan di admin panel.</p>' !!}
+    </div>
+
+    <div class="w-container" style="margin-top: 20px;">
+      <h3>{{ trans_db('page.prices.minigolf_admission', null, 'Entrée Mini-Golf') }}</h3>
+      <p>{{ trans_db('page.prices.minigolf_admission_desc', null, 'Les enfants de moins de 12 ans doivent être accompagnés d\'un adulte lorsqu\'ils jouent au mini-golf.') }}</p>
+      {!! \App\Models\PriceContent::getBySection('minigolf_admission') ?? '<p>Konten tidak ditemukan. Silakan tambahkan di admin panel.</p>' !!}
+    </div>
+
+    <div class="html-embed w-embed" style="margin-top: 20px;">
+      <h3>{{ trans_db('page.prices.all_offers_admission', null, 'Entrée pour l\'ensemble du centre de loisirs (Toutes les offres)') }}</h3>
+      <p>{{ trans_db('page.prices.all_offers_admission_desc', null, 'Dans le sauna et dans la douche à vapeur, les enfants de moins de 16 ans doivent être accompagnés d\'une personne adulte.') }}</p>
+      {!! \App\Models\PriceContent::getBySection('all_offers_admission') ?? '<p>Konten tidak ditemukan. Silakan tambahkan di admin panel.</p>' !!}
     </div>
 
     @include('components.navbar')
