@@ -16,7 +16,7 @@ if (!function_exists('get_locale')) {
      */
     function get_locale()
     {
-        return session('language', config('app.locale', 'id'));
+        return session('language', config('app.locale', 'fn'));
     }
 }
 
