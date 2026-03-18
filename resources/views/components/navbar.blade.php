@@ -13,11 +13,11 @@
       <a href="{{ route('contact') }}" class="nav-link-2 w-nav-link {{ request()->routeIs('contact') ? 'w--current' : '' }}">
         {{ trans_db('nav.contact') }}
       </a>
-      <div class="language-switcher">
+      {{-- <div class="language-switcher">
         <a href="{{ route('language.switch', 'id') }}" class="nav-link-2 w-nav-link @if(session('language') == 'id' || !session('language')) active @endif">ID</a>
         <a href="{{ route('language.switch', 'en') }}" class="nav-link-2 w-nav-link @if(session('language') == 'en') active @endif">EN</a>
         <a href="{{ route('language.switch', 'fr') }}" class="nav-link-2 w-nav-link @if(session('language') == 'fr') active @endif">FR</a>
-      </div>
+      </div> --}}
     </nav>
     <a href="{{ route('task') }}" class="button-task-header w-button">{{ trans_db('nav.task') }}</a>
     <div class="menu-button w-nav-button">
