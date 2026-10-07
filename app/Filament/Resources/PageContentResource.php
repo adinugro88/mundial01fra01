@@ -36,7 +36,7 @@ class PageContentResource extends Resource
                                     ->label('Kunci Halaman')
                                     ->required()
                                     ->disabled(fn (?PageContent $record) => $record?->exists)
-                                    ->helperText('mulai, tugas_1, tugas_1_batal, tugas_2, tugas_3, tugas_selesai, kembali, tidak_tersedia, reservasi')
+                                    ->helperText('mulai, tugas_1, tugas_1_batal, tugas_2, tugas_2_batal, tugas_selesai, kembali, tidak_tersedia, reservasi')
                                     ->columnSpanFull(),
 
                                 Forms\Components\Select::make('block_type')

@@ -8,10 +8,15 @@ use Illuminate\Support\Facades\Route;
 // Language switching
 Route::get('/language/{language}', [LanguageController::class, 'switch'])->name('language.switch');
 
-// Home page
+// Halaman depan = start.html (tabs penawaran + judul Tugas), Bahasa Indonesia
 Route::get('/', function () {
-    return view('index');
+    return view('start');
 })->name('home');
+
+// Halaman selamat datang (index.html referensi)
+Route::get('/beranda', function () {
+    return view('index');
+})->name('beranda');
 
 // Main pages
 Route::get('/offres', function () {
@@ -30,12 +35,12 @@ Route::post('/contact', function () {
     return view('contact');
 })->name('contact.submit');
 
-// Halaman pembuka tugas (start.html)
+// Halaman pembuka tugas (start.html) - sekarang menjadi halaman depan
 Route::get('/mulai', function () {
-    return view('start');
+    return redirect()->route('home');
 })->name('task.start');
 
-// Alur tugas 1 / 2 / 3 (aufgabe.html, task-01, task-02, task-03)
+// Alur tugas 1 / 2 (aufgabe.html, task-01, task-02) - tidak ada tugas 3
 Route::get('/tache', function () {
     return view('task', ['pageKey' => 'tugas_1']);
 })->name('task');
@@ -51,14 +56,6 @@ Route::get('/tache/2', function () {
 Route::get('/tache/2/cancel', function () {
     return view('task-cancel', ['pageKey' => 'tugas_2_batal']);
 })->name('task.2.cancel');
-
-Route::get('/tache/3', function () {
-    return view('task', ['pageKey' => 'tugas_3']);
-})->name('task.3');
-
-Route::get('/tache/3/cancel', function () {
-    return view('task-cancel', ['pageKey' => 'tugas_3_batal']);
-})->name('task.3.cancel');
 
 Route::get('/tache/selesai', function () {
     return view('task-end');

@@ -77,7 +77,7 @@ class PageContentSeeder extends Seeder
             ],
 
             // ---------------------------------------------------------
-            // Tugas 1 / 2 / 3 (aufgabe.html, task-01, task-02, task-03)
+            // Tugas 1 / 2 (aufgabe.html, task-01, task-02)
             // ---------------------------------------------------------
             [
                 'page_key' => 'tugas_1',
@@ -88,7 +88,7 @@ class PageContentSeeder extends Seeder
                 'button_text' => 'Lewati tugas',
                 'button_url' => '/tache/cancel',
                 'secondary_button_text' => 'Lanjutkan',
-                'secondary_button_url' => null,
+                'secondary_button_url' => '/tache/selesai',
                 'sort_order' => 1,
                 'is_visible' => true,
             ],
@@ -101,26 +101,13 @@ class PageContentSeeder extends Seeder
                 'button_text' => 'Lewati tugas',
                 'button_url' => '/tache/2/cancel',
                 'secondary_button_text' => 'Lanjutkan',
-                'secondary_button_url' => null,
-                'sort_order' => 1,
-                'is_visible' => true,
-            ],
-            [
-                'page_key' => 'tugas_3',
-                'block_type' => 'task',
-                'title' => 'Tugas 3',
-                'subtitle' => null,
-                'description' => 'Buka halaman <strong>Abonnements &amp; Prix</strong>.<br>Temukan biaya tambahan per orang untuk setiap tambahan 30 menit pada tiket harian, lalu lanjutkan ke halaman reservasi.',
-                'button_text' => 'Lewati tugas',
-                'button_url' => '/tache/3/cancel',
-                'secondary_button_text' => 'Lanjutkan',
-                'secondary_button_url' => null,
+                'secondary_button_url' => '/kembali',
                 'sort_order' => 1,
                 'is_visible' => true,
             ],
 
             // ---------------------------------------------------------
-            // Konfirmasi lewati tugas (task-01-cancel, task-02-cancel, task-03-cancel)
+            // Konfirmasi lewati tugas (task-01-cancel, task-02-cancel)
             // ---------------------------------------------------------
             [
                 'page_key' => 'tugas_1_batal',
@@ -142,22 +129,9 @@ class PageContentSeeder extends Seeder
                 'subtitle' => null,
                 'description' => 'Apakah Anda yakin ingin melewati tugas ini?',
                 'button_text' => 'Ya, lewati',
-                'button_url' => '/tache/3',
-                'secondary_button_text' => 'Tidak, kembali',
-                'secondary_button_url' => '/tache/2',
-                'sort_order' => 1,
-                'is_visible' => true,
-            ],
-            [
-                'page_key' => 'tugas_3_batal',
-                'block_type' => 'confirm',
-                'title' => 'Lewati tugas',
-                'subtitle' => null,
-                'description' => 'Apakah Anda yakin ingin melewati tugas ini?',
-                'button_text' => 'Ya, lewati',
                 'button_url' => '/kembali',
                 'secondary_button_text' => 'Tidak, kembali',
-                'secondary_button_url' => '/tache/3',
+                'secondary_button_url' => '/tache/2',
                 'sort_order' => 1,
                 'is_visible' => true,
             ],
@@ -231,6 +205,9 @@ class PageContentSeeder extends Seeder
                 'is_visible' => true,
             ],
         ];
+
+        // Referensi hanya punya 2 tugas; setelah tugas 2 langsung back-to-unipark
+        PageContent::whereIn('page_key', ['tugas_3', 'tugas_3_batal'])->delete();
 
         foreach ($rows as $row) {
             PageContent::updateOrCreate(
