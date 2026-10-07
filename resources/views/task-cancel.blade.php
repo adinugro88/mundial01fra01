@@ -12,8 +12,8 @@
     <div class="div-block-7">
       <div>
         <div class="w-layout-grid grid-2">
-          <a href="{{ $block?->secondary_button_url ?: route('home') }}" class="button3 w-button">{{ $block?->secondary_button_text ?? 'Tidak, kembali' }}</a>
-          <a href="{{ $block?->button_url ?: route('home') }}" class="button-red-abbrechen w-button">{{ $block?->button_text ?? 'Ya, lewati' }}</a>
+          <a href="{{ $block?->secondary_button_url ?: route('beranda') }}" class="button3 w-button">{{ $block?->secondary_button_text ?? 'Tidak, kembali' }}</a>
+          <a href="{{ $block?->button_url ?: route('task.2') }}" class="button-red-abbrechen w-button">{{ $block?->button_text ?? 'Ya, lewati' }}</a>
         </div>
       </div>
     </div>

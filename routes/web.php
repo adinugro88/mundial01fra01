@@ -82,22 +82,17 @@ Route::get('/tache/2/selesai', function () {
     return view('task-end', ['pageKey' => 'tugas_2_selesai']);
 })->name('task.2.end');
 
+// Alur berhenti di tugas 2, semua halaman tugas 3 diarahkan ke halaman akhir
 Route::get('/tache/3', function () {
-    session(['current_task' => 3]);
-
-    return view('task', ['pageKey' => 'tugas_3']);
+    return redirect()->route('task.unipark');
 })->name('task.3');
 
 Route::get('/tache/3/cancel', function () {
-    session(['current_task' => 3]);
-
-    return view('task-cancel', ['pageKey' => 'tugas_3_batal']);
+    return redirect()->route('task.unipark');
 })->name('task.3.cancel');
 
 Route::get('/tache/3/selesai', function () {
-    session(['current_task' => 3]);
-
-    return view('task-end', ['pageKey' => 'tugas_3_selesai']);
+    return redirect()->route('task.unipark');
 })->name('task.3.end');
 
 Route::get('/tache/selesai', function () {
@@ -106,9 +101,14 @@ Route::get('/tache/selesai', function () {
     return view('task-end', ['pageKey' => 'tugas_selesai']);
 })->name('task.end');
 
-// Kembali ke pengujian (back-to-unipark.html)
-Route::get('/kembali', function () {
+// Halaman akhir pengujian (back-to-unipark.html)
+Route::get('/back-to-unipark', function () {
     return view('back');
+})->name('task.unipark');
+
+// URL lama kembali ke pengujian (back-to-unipark.html)
+Route::get('/kembali', function () {
+    return redirect()->route('task.unipark');
 })->name('task.back');
 
 // Halaman placeholder aksi yang belum tersedia (no-way.html)

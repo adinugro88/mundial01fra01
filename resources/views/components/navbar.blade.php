@@ -1,6 +1,6 @@
 <div data-collapse="tiny" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
   <div class="container-6 w-container">
-    <a href="{{ route('home') }}" aria-current="page" class="w-inline-block {{ request()->routeIs('home') ? 'w--current' : '' }}">
+    <a href="{{ route('beranda') }}" aria-current="page" class="w-inline-block {{ request()->routeIs('beranda') ? 'w--current' : '' }}">
       <img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image">
     </a>
     <nav role="navigation" class="w-nav-menu">

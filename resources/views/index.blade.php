@@ -77,7 +77,7 @@
 </section>
 <footer id="footer" class="footer">
   <div class="container-8 w-container">
-    <a href="{{ route('home') }}" class="w-inline-block"><img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image-1"></a>
+    <a href="{{ route('beranda') }}#hero-overlay" class="w-inline-block"><img src="{{ asset('images/logo1_v3.svg') }}" height="40" alt="" class="image-1"></a>
   </div>
   <div class="container-8 w-container">
     <div class="w-row">

@@ -91,9 +91,6 @@
     @else
     <div class="w-form-done" style="display:block;">
       <div>Terima kasih! Pengiriman Anda telah kami terima.</div>
-      <div class="div-block-203" style="margin-top: 20px;">
-        <a href="{{ route('task.3.end') }}" class="primary-button w-button">Selesaikan tugas 3</a>
-      </div>
     </div>
     @endunless
   </div>

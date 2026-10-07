@@ -6,7 +6,7 @@
 <section id="cards-section" class="cards-section-6">
   <div class="centered-container w-container">
     <div>
-      <a href="{{ route('home') }}" class="back-copy w-inline-block"><img src="{{ asset('images/back.svg') }}" loading="lazy" alt="" class="image-26">
+      <a href="{{ route('beranda') }}" class="back-copy w-inline-block"><img src="{{ asset('images/back.svg') }}" loading="lazy" alt="" class="image-26">
         <div class="text-block-7">{{ trans_db('offer.back_to_offers', null, 'À la liste des offres') }}</div>
       </a>
     </div>
