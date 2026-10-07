@@ -21,6 +21,10 @@
       <p>{!! trans_db('offer.sauna.recommendation', null, 'Nous vous recommandons de bénéficier de trois intercirculations, car plus n\'apporte pas de bénéfices pour la santé et peuvent conduire à la fatigue des fonctions corporelles.') !!}</p>
       <p>‍<br></p>
     </div>
+    <div class="div-block-209">
+      <a href="{{ route('reservation') }}" class="primary-button w-button">{{ trans_db('offer.button_book', null, 'Réserver') }}</a>
+      <a href="{{ route('task.end') }}" class="primary-button w-button">{{ trans_db('task.finish_button', 'id', 'Selesaikan tugas 1') }}</a>
+    </div>
   </div>
   @include('components.navbar')
 </main>

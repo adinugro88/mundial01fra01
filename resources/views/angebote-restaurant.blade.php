@@ -21,7 +21,7 @@
       <p>‍</p>
     </div>
     <div class="div-block-209">
-      <a href="#" class="primary-button w-button">{{ trans_db('offer.button_reservation', null, 'Faire une réservation') }}</a>
+      <a href="{{ route('reservation') }}" class="primary-button w-button">{{ trans_db('offer.button_reservation', null, 'Faire une réservation') }}</a>
     </div>
   </div>
   @include('components.navbar')

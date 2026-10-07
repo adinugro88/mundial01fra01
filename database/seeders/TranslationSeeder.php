@@ -464,6 +464,11 @@ class TranslationSeeder extends Seeder
             ['key' => 'task.description', 'language' => 'id', 'section' => 'pages', 'value' => 'Seorang teman memberi tahu Anda betapa bermanfaatnya sauna aromatik di pusat rekreasi Mundial. Anda ingin melihatnya sendiri minggu depan. <br>Gunakan situs web Mundial untuk mengetahui apakah sauna aromatik buka di musim dingin.', 'type' => 'text'],
             ['key' => 'task.skip_button', 'language' => 'id', 'section' => 'pages', 'value' => 'Lewati tugas', 'type' => 'text'],
             ['key' => 'task.continue_button', 'language' => 'id', 'section' => 'pages', 'value' => 'Lanjutkan', 'type' => 'text'],
+
+            // Task finish button
+            ['key' => 'task.finish_button', 'language' => 'fr', 'section' => 'pages', 'value' => 'Terminer la tâche 1', 'type' => 'text'],
+            ['key' => 'task.finish_button', 'language' => 'en', 'section' => 'pages', 'value' => 'Finish task 1', 'type' => 'text'],
+            ['key' => 'task.finish_button', 'language' => 'id', 'section' => 'pages', 'value' => 'Selesaikan tugas 1', 'type' => 'text'],
         ];
 
         foreach ($translations as $translation) {

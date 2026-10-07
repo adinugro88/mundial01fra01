@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 // Language switching
 Route::get('/language/{language}', [LanguageController::class, 'switch'])->name('language.switch');
@@ -28,13 +30,72 @@ Route::post('/contact', function () {
     return view('contact');
 })->name('contact.submit');
 
+// Halaman pembuka tugas (start.html)
+Route::get('/mulai', function () {
+    return view('start');
+})->name('task.start');
+
+// Alur tugas 1 / 2 / 3 (aufgabe.html, task-01, task-02, task-03)
 Route::get('/tache', function () {
-    return view('task');
+    return view('task', ['pageKey' => 'tugas_1']);
 })->name('task');
 
 Route::get('/tache/cancel', function () {
-    return view('layout');
+    return view('task-cancel', ['pageKey' => 'tugas_1_batal']);
 })->name('task.cancel');
+
+Route::get('/tache/2', function () {
+    return view('task', ['pageKey' => 'tugas_2']);
+})->name('task.2');
+
+Route::get('/tache/2/cancel', function () {
+    return view('task-cancel', ['pageKey' => 'tugas_2_batal']);
+})->name('task.2.cancel');
+
+Route::get('/tache/3', function () {
+    return view('task', ['pageKey' => 'tugas_3']);
+})->name('task.3');
+
+Route::get('/tache/3/cancel', function () {
+    return view('task-cancel', ['pageKey' => 'tugas_3_batal']);
+})->name('task.3.cancel');
+
+Route::get('/tache/selesai', function () {
+    return view('task-end');
+})->name('task.end');
+
+// Kembali ke pengujian (back-to-unipark.html)
+Route::get('/kembali', function () {
+    return view('back');
+})->name('task.back');
+
+// Halaman placeholder aksi yang belum tersedia (no-way.html)
+Route::get('/tidak-tersedia', function () {
+    return view('no-way');
+})->name('no.way');
+
+// Reservasi (angebote-2/reservation-geburtstagsfeier.html)
+Route::get('/reservasi', function () {
+    return view('reservation');
+})->name('reservation');
+
+Route::post('/reservasi', function (Request $request) {
+    $data = $request->validate([
+        'people_count' => ['required', 'integer', 'min:2', 'max:8'],
+        'reservation_date' => ['required', 'date', 'after_or_equal:today'],
+        'reservation_time' => ['required', 'string', 'max:20'],
+        'first_name' => ['required', 'string', 'max:255'],
+        'last_name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'email', 'max:255'],
+        'phone_code' => ['required', 'string', 'max:10'],
+        'phone' => ['required', 'string', 'max:30'],
+        'comment' => ['nullable', 'string', 'max:5000'],
+    ]);
+
+    Reservation::create($data);
+
+    return redirect()->route('reservation', ['success' => 1]);
+})->name('reservation.submit');
 
 // Angebote (Offers) sub-pages
 Route::get('/angebote/hallenbad', function () {
@@ -60,5 +121,3 @@ Route::get('/angebote/geburtstag', function () {
 Route::get('/angebote/restaurant', function () {
     return view('angebote-restaurant');
 })->name('angebote-restaurant');
-
-

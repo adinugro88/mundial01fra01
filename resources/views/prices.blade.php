@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="div-block-203">
-        <a href="#" class="primary-button-card-offer w-button">{{ trans_db('page.prices.buy_now', null, 'Acheter maintenant') }}</a>
+        <a href="{{ route('no.way') }}" class="primary-button-card-offer w-button">{{ trans_db('page.prices.buy_now', null, 'Acheter maintenant') }}</a>
       </div>
     </div>
 
