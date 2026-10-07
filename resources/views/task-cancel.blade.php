@@ -18,6 +18,5 @@
       </div>
     </div>
   </div>
-  @include('components.navbar')
 </main>
 @endsection

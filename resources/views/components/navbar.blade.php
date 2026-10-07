@@ -19,7 +19,7 @@
         <a href="{{ route('language.switch', 'fr') }}" class="nav-link-2 w-nav-link @if(session('language') == 'fr') active @endif">FR</a>
       </div> --}}
     </nav>
-    <a href="{{ route('task') }}" class="button-task-header w-button">{{ trans_db('nav.task') }}</a>
+    <a href="{{ route('task.statement') }}" class="button-task-header w-button">{{ trans_db('nav.task') }}</a>
     <div class="menu-button w-nav-button">
       <div class="icon w-icon-nav-menu"></div>
     </div>

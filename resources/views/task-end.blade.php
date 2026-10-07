@@ -1,6 +1,6 @@
 @extends('layout')
 
-@php($block = \App\Models\PageContent::block('tugas_selesai'))
+@php($block = \App\Models\PageContent::block($pageKey ?? 'tugas_selesai'))
 
 @section('title', ($block?->title ?? 'Tugas selesai').' - Mundial')
 
@@ -13,6 +13,5 @@
       <a href="{{ $block?->button_url ?: route('task.2') }}" class="button w-button">{{ $block?->button_text ?? 'Tugas berikutnya' }}</a>
     </div>
   </div>
-  @include('components.navbar')
 </main>
 @endsection

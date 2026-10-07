@@ -17,6 +17,9 @@
       <div class="div-block-203">
         <a href="{{ route('no.way') }}" class="primary-button-card-offer w-button">{{ trans_db('page.prices.buy_now', null, 'Acheter maintenant') }}</a>
       </div>
+      <div class="div-block-203" style="margin-top: 10px;">
+        <a href="{{ route('task.2.end') }}" class="primary-button w-button">Selesaikan tugas 2</a>
+      </div>
     </div>
 
     <div class="html-embed w-embed">

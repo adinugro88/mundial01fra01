@@ -43,7 +43,6 @@ class PageContentResource extends Resource
                                     ->label('Jenis Blok')
                                     ->required()
                                     ->options([
-                                        'tab' => 'Tab penawaran',
                                         'instruction' => 'Instruksi tugas',
                                         'task' => 'Pernyataan tugas',
                                         'confirm' => 'Konfirmasi lewati',
@@ -154,7 +153,6 @@ class PageContentResource extends Resource
                 Tables\Filters\SelectFilter::make('block_type')
                     ->label('Jenis Blok')
                     ->options([
-                        'tab' => 'Tab penawaran',
                         'instruction' => 'Instruksi tugas',
                         'task' => 'Pernyataan tugas',
                         'confirm' => 'Konfirmasi lewati',

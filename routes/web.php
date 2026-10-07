@@ -10,6 +10,8 @@ Route::get('/language/{language}', [LanguageController::class, 'switch'])->name(
 
 // Halaman depan = start.html (tabs penawaran + judul Tugas), Bahasa Indonesia
 Route::get('/', function () {
+    session(['current_task' => 1]);
+
     return view('start');
 })->name('home');
 
@@ -41,24 +43,67 @@ Route::get('/mulai', function () {
 })->name('task.start');
 
 // Alur tugas 1 / 2 (aufgabe.html, task-01, task-02) - tidak ada tugas 3
+// Pernyataan tugas (aufgabe.html) - dibuka dari tombol hijau "Tugas"
+// diikuti task saat ini (berpindah site seperti fra01->fra02 di referensi)
+Route::get('/tugas', function () {
+    $keys = [1 => 'tugas_1_pernyataan', 2 => 'tugas_2_pernyataan', 3 => 'tugas_3_pernyataan'];
+    $pageKey = $keys[(int) session('current_task', 1)] ?? 'tugas_1_pernyataan';
+
+    return view('task-statement', compact('pageKey'));
+})->name('task.statement');
+
 Route::get('/tache', function () {
+    session(['current_task' => 1]);
+
     return view('task', ['pageKey' => 'tugas_1']);
 })->name('task');
 
 Route::get('/tache/cancel', function () {
+    session(['current_task' => 1]);
+
     return view('task-cancel', ['pageKey' => 'tugas_1_batal']);
 })->name('task.cancel');
 
 Route::get('/tache/2', function () {
+    session(['current_task' => 2]);
+
     return view('task', ['pageKey' => 'tugas_2']);
 })->name('task.2');
 
 Route::get('/tache/2/cancel', function () {
+    session(['current_task' => 2]);
+
     return view('task-cancel', ['pageKey' => 'tugas_2_batal']);
 })->name('task.2.cancel');
 
+Route::get('/tache/2/selesai', function () {
+    session(['current_task' => 2]);
+
+    return view('task-end', ['pageKey' => 'tugas_2_selesai']);
+})->name('task.2.end');
+
+Route::get('/tache/3', function () {
+    session(['current_task' => 3]);
+
+    return view('task', ['pageKey' => 'tugas_3']);
+})->name('task.3');
+
+Route::get('/tache/3/cancel', function () {
+    session(['current_task' => 3]);
+
+    return view('task-cancel', ['pageKey' => 'tugas_3_batal']);
+})->name('task.3.cancel');
+
+Route::get('/tache/3/selesai', function () {
+    session(['current_task' => 3]);
+
+    return view('task-end', ['pageKey' => 'tugas_3_selesai']);
+})->name('task.3.end');
+
 Route::get('/tache/selesai', function () {
-    return view('task-end');
+    session(['current_task' => 1]);
+
+    return view('task-end', ['pageKey' => 'tugas_selesai']);
 })->name('task.end');
 
 // Kembali ke pengujian (back-to-unipark.html)

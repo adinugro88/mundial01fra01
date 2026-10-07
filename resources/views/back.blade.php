@@ -13,6 +13,5 @@
       <a href="{{ $block?->button_url ?: route('home') }}" class="button w-button">{{ $block?->button_text ?? 'Kembali ke beranda' }}</a>
     </div>
   </div>
-  @include('components.navbar')
 </main>
 @endsection
